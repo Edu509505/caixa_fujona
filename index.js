@@ -2,10 +2,7 @@ const botaoDoNao = document.getElementById('botao2')
 const botaoDoSim = document.getElementById('botao1')
 const caixaFujonaId = document.getElementById('caixa')
 
-const botaoSim = document.querySelector('#botao1')
-const corpo = document.querySelector('#paiDeTodos')
 const caixaFujona = document.querySelector('#caixa')
-const letra = document.querySelector('#mensagem')
 
 botaoDoNao.addEventListener('mouseover', () => {
 
@@ -35,18 +32,18 @@ botaoDoNao.addEventListener('click', () => {
 
 botaoDoSim.addEventListener('click', () =>{
 
-    // corpo.style.backgroundImage = 'url(./capturaDeTela.png)'
+    document.getElementById("mensagem").textContent = "Trabalhando Alegre?!"
+    document.getElementById("mensagem2").textContent = "Feliz pela sua proatividade"
 
-    caixaFujonaId.innerHTML = '<h3 id="mensagem">Trabalhando Alegre?!</h3><h5>Feliz pela sua proatividade</h5>'
-    letra.style.margin = '0 2rem'
+    document.getElementById("botao1").textContent = ""
+    document.getElementById("botao2").textContent = ""
 
-    // botaoDoSim.innerHTML = 'Ebah!'
+    document.getElementById("botoes", "botao1", "botao2").style.height = 0
+    document.getElementById("botoes", "botao1", "botao2").style.width = 0
+    document.getElementById("botoes").style.margin = 0
     
-    // botaoSim.style.width = '80%'
-    
+    botaoDoNao.remove()
     caixaFujona.style.gridColumn = 3
     caixaFujona.style.gridRow = 3
-
-    botaoDoNao.remove()
 
 })
